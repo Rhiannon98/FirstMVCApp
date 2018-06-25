@@ -1,0 +1,64 @@
+﻿body {
+    background-color: lightsteelblue;
+}
+/*this is just the basic border around the form
+    and title
+*/
+section.time-border {
+    border: 5px solid #FF0000;
+    padding: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30em;
+}
+
+h1.time {
+    color: #FF0000;
+    font-size: 10em;
+}
+
+th, tr, td {
+    border: 2px solid #4A4647;
+    border-spacing: 50px;
+    padding: .75em;
+}
+
+table {
+    background-color: darkgrey;
+    border: 3px solid #1e1e1e;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+td {
+    color: #000;
+    font-family: sans-serif;
+    font-size: .9em;
+}
+
+th {
+    color: #000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: .9em;
+}
+/*asked EJC again how he got those alternating colors*/
+tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+th, tr:first-child {
+    background-color: grey;
+}
+/*when the user hovers, the color SHOULD change 
+    in the table
+*/
+td:hover {
+    background-color: lightslategrey;
+    color: #FFFFFF;
+}
+/*nav button look*/
+.nav-button {
+    margin: .5em;
+    padding: .5em;
+}

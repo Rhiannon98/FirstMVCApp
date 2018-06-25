@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FirstMVCApp.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,13 +21,20 @@ namespace FirstMVCApp.Controllers
 
         // using info from the user
         [HttpPost]
-        // add Index 
+        // add Index
+        // a redirect to the Results method
+        // beingYear is a year the user typed
+        // endYear is a year the user typed
         public IActionResult Index(int beginYear, int endYear)
         {
-            return View();
+            return RedirectToAction("Results", new { beginYear, endYear});
         }
 
-        // [Http????]
-        // add results redirect??
+        // a list with filters
+        public IActionResult Results(int beginYear, int endYear)
+        {
+            TimePeople newPerson = new TimePeople();
+            return View(newPerson.GetPeople(beginYear, endYear));
+        }
     }
 }

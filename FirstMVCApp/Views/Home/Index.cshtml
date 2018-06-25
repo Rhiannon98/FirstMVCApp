@@ -1,12 +1,23 @@
-﻿<h1>Yes</h1>
+﻿@model FirstMVCApp.Models.TimePeople;
+@{
+    ViewData["Title"]= "Index";
+}
+<!--Linking to stylesheet-->
+<link rel="stylesheet" href="~/StyleSheet.css" type="text/css"/>
 
-<form method="post">
-    <label for="beginYear"> Beginning Year </label>
-    <input maxlength="4" name="beginYear"/>
+<!--The form that the user will, well, use-->
+@ViewData["Home Page"]
+<section class="time-border">
+    <h1 class="time">TIME</h1>
 
-    <label for="endYear"> Ending Year </label>
-    <input maxlength="4" name="endYear" />
+   <form method="post">
+        <label for="beginYear"> Beginning Year </label>
+        <input maxlength="4" name="beginYear" />
 
-    <button type="submit">Send Data</button>
-</form>
+        <label for="endYear"> Ending Year </label>
+        <input maxlength="4" name="endYear" />
+
+        <button type="submit">Send Data</button>
+    </form>
+</section>
 

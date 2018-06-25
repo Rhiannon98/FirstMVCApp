@@ -31,18 +31,11 @@ namespace FirstMVCApp
             
             // had to use amandas, mine did not work for 
             // some ungodly reason
-                 app.UseMvc(route =>
-
-	        {
-
+            app.UseMvc(route =>
+            {
 		        route.MapRoute(
-
 					name:"default",
-
-					template: "{controller=Home}/{action=Index}/{id?}");
-
-					
-
+					template: "{controller=Home}/{action=Index}/{id?}");					
 	        });
             app.Run(async (context) =>
             {

@@ -1,0 +1,42 @@
+﻿@model List<FirstMVCApp.Models.TimePeople>;
+@{
+    ViewData["Title"]="Results";
+}
+<link rel="stylesheet" href="~/StyleSheet.css" type="text/css"/>
+<form id="return-home">
+    @*The below is a redirect via a button
+        this was provided by EJCaoile when I 
+        asked about his method upon seeing his site*@
+    <input type="button" class="nav-button" value="Return Home" onclick="window.location.href='/Home'"/>
+</form>
+
+<table>
+    <tr>
+        <th>YEAR</th>
+        <th>HONOR</th>
+        <th>NAME</th>
+        <th>COUNTRY</th>
+        <th>BIRTH YEAR</th>
+        <th>DEATH YEAR</th>
+        <th>TITLE</th>
+        <th>CATEGORY</th>
+        <th>CONTEXT</th>
+    </tr>
+    @*Another question I had asked, was how some 
+        of my peers were populating the table, 
+        fortunately EJCaoile had my butt again*@
+    @foreach (var person in Model)
+    {
+    <tr>
+        <td>@person.Year</td>
+        <td>@person.Honor</td>
+        <td>@person.Name</td>
+        <td>@person.Country</td>
+        <td>@person.Birth_Year</td>
+        <td>@person.DeathYear</td>
+        <td>@person.Title</td>
+        <td>@person.Category</td>
+        <td>@person.Context</td>
+    </tr>
+    }
+</table>
